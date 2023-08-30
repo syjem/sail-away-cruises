@@ -134,6 +134,7 @@ body {
   font-weight: 900;
   font-size: 0.9rem;
   font-family: sans-serif;
+  transition: 0.3s ease;
   box-sizing: border-box;
 }
 
@@ -142,12 +143,13 @@ body {
 }
 
 .custom-header-mobile-nav-menu {
+  margin: 0;
   padding: 0;
   list-style: none;
+  padding-top: 0.3rem;
   -ms-flex-direction: column;
   flex-direction: column;
   justify-content: flex-start;
-  margin-top: 0;
 
   position: fixed;
   top: 100px;
@@ -155,7 +157,6 @@ body {
   display: block;
   width: 250px;
   height: 100%;
-  margin: 0;
   z-index: 100;
   transition: 0.3s ease;
   background-color: hsl(0, 0%, 100%);
