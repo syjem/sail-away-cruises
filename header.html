@@ -33,7 +33,7 @@
 
   @media screen and (max-width: 768px) {
     .custom-header-nav {
-      justify-content: flex-start;
+      /* justify-content: flex-start; */
       gap: 1rem;
     }
   }
@@ -47,9 +47,10 @@
   .custom-header-menu-toggle {
     position: relative;
     display: block;
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 25px;
     cursor: pointer;
+    z-index: 1000;
 
     appearance: none;
     background: none;
@@ -73,8 +74,8 @@
     display: block;
     min-width: 100%;
     width: 100%;
-    height: 4px;
-    border-radius: 3px;
+    height: 3px;
+    border-radius: 1px;
     background-color: #000;
     margin: 4px 0px;
     box-sizing: border-box;
@@ -82,11 +83,11 @@
   }
 
   .custom-header-menu-toggle.is-active::before {
-    transform: rotate(-45deg) translate(-9px, 2px);
+    transform: rotate(-45deg) translate(-9px, 1px);
   }
 
   .custom-header-menu-toggle.is-active::after {
-    transform: rotate(45deg) translate(-9px, -3px);
+    transform: rotate(45deg) translate(-9px, -1px);
   }
 
   .custom-header-menu-toggle.is-active .custom-header-bar {
@@ -94,9 +95,16 @@
   }
 
   .custom-header-main-logo-container {
-    display: block;
+    display: flex;
+    align-items: center;
     max-width: 100%;
     box-sizing: border-box;
+  }
+
+  @media screen and (max-width: 768px) {
+    .custom-header-main-logo {
+      width: 150px;
+    }
   }
 
   .custom-header-nav-menu {
@@ -130,6 +138,7 @@
     font-weight: 900;
     font-size: 0.9rem;
     font-family: sans-serif;
+    transition: 0.3s ease;
     box-sizing: border-box;
   }
 
@@ -138,52 +147,57 @@
   }
 
   .custom-header-mobile-nav-menu {
+    margin: 0;
     padding: 0;
     list-style: none;
+    padding-top: 5rem;
+    display: none;
     -ms-flex-direction: column;
     flex-direction: column;
-    justify-content: flex-start;
-    margin-top: 0;
+    align-items: center;
 
     position: fixed;
-    top: 100px;
-    left: -250px;
-    display: block;
-    width: 250px;
+    top: 0;
+    width: 100%;
     height: 100%;
-    margin: 0;
     z-index: 100;
     transition: 0.3s ease;
     background-color: hsl(0, 0%, 100%);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.36);
     box-sizing: border-box;
   }
 
   .custom-header-mobile-nav-item {
-    display: block;
-    padding-left: 0.5rem;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    width: 140px;
     box-sizing: border-box;
     transition: 0.3s ease;
+    border-bottom: 1px solid rgba(27, 27, 28, 0.3);
   }
 
-  .custom-header-mobile-nav-item:hover {
-    background-color: rgba(219, 216, 216, 0.8) !important;
+  .custom-header-mobile-nav-item:last-of-type {
+    border-bottom: none;
   }
 
   .custom-header-mobile-nav-item:hover .custom-header-mobile-nav-link {
-    color: rgb(96, 94, 94);
+    color: rgb(255, 184, 31);
   }
 
   .custom-header-mobile-nav-link {
     display: block;
     padding: 0.5rem;
-    font-weight: 900;
+    font-weight: 600;
     font-size: 0.9rem;
     text-decoration: none;
     transition: 0.3s ease;
     font-family: sans-serif;
-    color: rgb(255, 184, 31);
+    color: rgba(0, 0, 0, 0.5);
     box-sizing: border-box;
+  }
+
+  .custom-header-mobile-nav-link.active {
+    color: rgb(255, 184, 31);
   }
 
   .custom-header-mobile-nav-link:hover {
@@ -200,6 +214,9 @@
 <header class="custom-header">
   <div class="custom-header-container">
     <nav class="custom-header-nav">
+      <div class="custom-header-main-logo-container">
+        <img src="./images/SailAway_Logo.webp" alt="Sail Away Logo" />
+      </div>
       <button
         class="custom-header-menu-toggle"
         type="button"
@@ -207,9 +224,6 @@
       >
         <div class="custom-header-bar"></div>
       </button>
-      <div class="custom-header-main-logo-container">
-        <img src="./images/SailAway_Logo.webp" alt="Sail Away Logo" />
-      </div>
       <ul class="custom-header-nav-menu">
         <li class="custom-header-nav-item">
           <a class="custom-header-nav-link" href="/">Home</a>
@@ -255,9 +269,9 @@
       menuButton.classList.toggle("is-active");
 
       if (menuButton.classList.contains("is-active")) {
-        mobileNavMenu.style.left = 0;
+        mobileNavMenu.style.display = "flex";
       } else {
-        mobileNavMenu.style.left = "-250px";
+        mobileNavMenu.style.display = "none";
       }
     });
   });
