@@ -168,7 +168,6 @@ body {
   transition: 0.3s ease;
   background-color: hsl(0, 0%, 100%);
   box-sizing: border-box;
-  opacity: 0;
 }
 
 .custom-header-mobile-nav-item {
