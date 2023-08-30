@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" href="./images/SailAway_Logo.webp" />
+    <title>Sail Away</title>
+  </head>
+  <body>
+    <header class="custom-header">
+      <div class="custom-header-container">
+        <nav class="custom-header-nav">
+          <button
+            class="custom-header-menu-toggle"
+            type="button"
+            title="Toggle Menu"
+          >
+            <div class="custom-header-bar"></div>
+          </button>
+          <div class="custom-header-main-logo-container">
+            <img src="./images/SailAway_Logo.webp" alt="Sail Away Logo" />
+          </div>
+          <ul class="custom-header-nav-menu">
+            <li class="custom-header-nav-item">
+              <a class="custom-header-nav-link" href="/">Home</a>
+            </li>
+            <li class="custom-header-nav-item">
+              <a class="custom-header-nav-link" href="/about-us">About Us</a>
+            </li>
+            <li class="custom-header-nav-item">
+              <a class="custom-header-nav-link" href="/our-brands"
+                >Our Brands</a
+              >
+            </li>
+            <li class="custom-header-nav-item">
+              <a class="custom-header-nav-link" href="/subscribe">Subscribe</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="custom-header-mobile-nav-menu">
+          <li class="custom-header-mobile-nav-item">
+            <a class="custom-header-mobile-nav-link" href="/">Home</a>
+          </li>
+          <li class="custom-header-mobile-nav-item">
+            <a class="custom-header-mobile-nav-link" href="/about-us"
+              >About Us</a
+            >
+          </li>
+          <li class="custom-header-mobile-nav-item">
+            <a class="custom-header-mobile-nav-link" href="/our-brands"
+              >Our Brands</a
+            >
+          </li>
+          <li class="custom-header-mobile-nav-item">
+            <a class="custom-header-mobile-nav-link" href="/subscribe"
+              >Subscribe</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <footer class="custom-footer">
+      <div class="custom-footer-container">
+        <div class="custom-footer-main-content">
+          <div class="custom-footer-logo-container">
+            <img src="./images/SailAway_Logo.webp" alt="Sail Away Logo" />
+          </div>
+          <div class="custom-footer-contact-us-container">
+            <h6 class="custom-footer-contact-us-header">Contact Us</h6>
+            <p class="custom-footer-contact-us-info">
+              Suite 102, 66 Berry Street, North Sydney, NSW, 2060
+            </p>
+            <p class="custom-footer-contact-us-info">Phone: (02) 8111 7399</p>
+          </div>
+          <div class="custom-footer-nav-container">
+            <ul class="custom-footer-nav-menu">
+              <li class="custom-footer-nav-item">
+                <a class="custom-footer-nav-link" href="/about-us">About Us</a>
+              </li>
+              <li class="custom-footer-nav-item">
+                <a class="custom-footer-nav-link" href="/our-brands"
+                  >Our Brands</a
+                >
+              </li>
+              <li class="custom-footer-nav-item">
+                <a class="custom-footer-nav-link" href="/subscribe"
+                  >Subscribe</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="custom-footer-social-container">
+            <ul class="custom-footer-social-menu">
+              <li class="custom-footer-social-item">
+                <a
+                  href="https://web.facebook.com/sailawaycruises.deals"
+                  target="_blank"
+                >
+                  <img
+                    class="custom-footer-social-logo"
+                    src="./images/facebook_logo.svg"
+                    alt="facebook_logo"
+                  />
+                </a>
+              </li>
+              <li class="custom-footer-social-item">
+                <a
+                  href="https://www.instagram.com/_sailawaycruises/"
+                  target="_blank"
+                  ><img
+                    class="custom-footer-social-logo"
+                    src="./images/instagram_logo.svg"
+                    alt="instagram_logo"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="custom-footer-hr"></div>
+        <div class="custom-footer-additional-content">
+          <p class="custom-footer-credits-reserved">
+            &copy; 2023 Sail Away Cruises
+          </p>
+          <p class="custom-footer-terms-conditions">
+            <a class="custom-footer-terms-link" href="/terms-conditions"
+              >Terms & Conditions</a
+            >
+            &
+            <a class="custom-footer-privacy-policy-link" href="/privacy-policy"
+              >Privacy Policy</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuButton = document.querySelector(".custom-header-menu-toggle");
+        const mobileNavMenu = document.querySelector(
+          ".custom-header-mobile-nav-menu "
+        );
+
+        menuButton.addEventListener("click", () => {
+          menuButton.classList.toggle("is-active");
+
+          if (menuButton.classList.contains("is-active")) {
+            mobileNavMenu.style.left = 0;
+          } else {
+            mobileNavMenu.style.left = "-250px";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

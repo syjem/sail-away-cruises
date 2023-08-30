@@ -1,0 +1,264 @@
+<style>
+  .custom-header {
+    color: rgb(255, 255, 255);
+    padding: 1.5rem 3rem;
+    width: 100%;
+    position: static;
+    z-index: 10;
+    box-sizing: border-box;
+  }
+
+  @media screen and (max-width: 768px) {
+    .custom-header {
+      padding: 0;
+    }
+  }
+
+  .custom-header-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .custom-header-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+    margin: 0 7.5rem;
+    transition: 0.3s ease;
+    box-sizing: border-box;
+  }
+
+  @media screen and (max-width: 768px) {
+    .custom-header-nav {
+      justify-content: flex-start;
+      gap: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 1040px) {
+    .custom-header-nav {
+      margin: 0 !important;
+    }
+  }
+
+  .custom-header-menu-toggle {
+    position: relative;
+    display: block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+
+    display: none;
+    box-sizing: border-box;
+  }
+
+  @media screen and (max-width: 768px) {
+    .custom-header-menu-toggle {
+      display: block;
+    }
+  }
+
+  .custom-header-bar,
+  .custom-header-menu-toggle::after,
+  .custom-header-menu-toggle::before {
+    content: "";
+    display: block;
+    min-width: 100%;
+    width: 100%;
+    height: 4px;
+    border-radius: 3px;
+    background-color: #000;
+    margin: 4px 0px;
+    box-sizing: border-box;
+    transition: 0.3s ease;
+  }
+
+  .custom-header-menu-toggle.is-active::before {
+    transform: rotate(-45deg) translate(-9px, 2px);
+  }
+
+  .custom-header-menu-toggle.is-active::after {
+    transform: rotate(45deg) translate(-9px, -3px);
+  }
+
+  .custom-header-menu-toggle.is-active .custom-header-bar {
+    opacity: 0;
+  }
+
+  .custom-header-main-logo-container {
+    display: block;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .custom-header-nav-menu {
+    padding: 0;
+    gap: 0.5rem;
+    display: flex;
+    margin-right: 1rem;
+    align-items: center;
+    list-style-type: none;
+    justify-content: flex-start;
+    box-sizing: border-box;
+  }
+
+  @media screen and (max-width: 768px) {
+    .custom-header-nav-menu {
+      display: none;
+    }
+  }
+
+  .custom-header-nav-item {
+    padding: 0.5rem;
+    align-self: center;
+    display: flex;
+    justify-content: flex-start;
+    box-sizing: border-box;
+  }
+
+  .custom-header-nav-link {
+    text-decoration: none;
+    color: rgb(255, 184, 31);
+    font-weight: 900;
+    font-size: 0.9rem;
+    font-family: sans-serif;
+    box-sizing: border-box;
+  }
+
+  .custom-header-nav-link:hover {
+    color: rgb(96, 94, 94);
+  }
+
+  .custom-header-mobile-nav-menu {
+    padding: 0;
+    list-style: none;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 0;
+
+    position: fixed;
+    top: 100px;
+    left: -250px;
+    display: block;
+    width: 250px;
+    height: 100%;
+    margin: 0;
+    z-index: 100;
+    transition: 0.3s ease;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.36);
+    box-sizing: border-box;
+  }
+
+  .custom-header-mobile-nav-item {
+    display: block;
+    padding-left: 0.5rem;
+    box-sizing: border-box;
+    transition: 0.3s ease;
+  }
+
+  .custom-header-mobile-nav-item:hover {
+    background-color: rgba(219, 216, 216, 0.8) !important;
+  }
+
+  .custom-header-mobile-nav-item:hover .custom-header-mobile-nav-link {
+    color: rgb(96, 94, 94);
+  }
+
+  .custom-header-mobile-nav-link {
+    display: block;
+    padding: 0.5rem;
+    font-weight: 900;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: 0.3s ease;
+    font-family: sans-serif;
+    color: rgb(255, 184, 31);
+    box-sizing: border-box;
+  }
+
+  .custom-header-mobile-nav-link:hover {
+    color: rgb(96, 94, 94);
+  }
+
+  @media screen and (min-width: 768px) {
+    .custom-header-mobile-nav-menu {
+      display: none !important;
+    }
+  }
+</style>
+
+<header class="custom-header">
+  <div class="custom-header-container">
+    <nav class="custom-header-nav">
+      <button
+        class="custom-header-menu-toggle"
+        type="button"
+        title="Toggle Menu"
+      >
+        <div class="custom-header-bar"></div>
+      </button>
+      <div class="custom-header-main-logo-container">
+        <img src="./images/SailAway_Logo.webp" alt="Sail Away Logo" />
+      </div>
+      <ul class="custom-header-nav-menu">
+        <li class="custom-header-nav-item">
+          <a class="custom-header-nav-link" href="/">Home</a>
+        </li>
+        <li class="custom-header-nav-item">
+          <a class="custom-header-nav-link" href="/about-us">About Us</a>
+        </li>
+        <li class="custom-header-nav-item">
+          <a class="custom-header-nav-link" href="/our-brands">Our Brands</a>
+        </li>
+        <li class="custom-header-nav-item">
+          <a class="custom-header-nav-link" href="/subscribe">Subscribe</a>
+        </li>
+      </ul>
+    </nav>
+    <ul class="custom-header-mobile-nav-menu">
+      <li class="custom-header-mobile-nav-item">
+        <a class="custom-header-mobile-nav-link" href="/">Home</a>
+      </li>
+      <li class="custom-header-mobile-nav-item">
+        <a class="custom-header-mobile-nav-link" href="/about-us">About Us</a>
+      </li>
+      <li class="custom-header-mobile-nav-item">
+        <a class="custom-header-mobile-nav-link" href="/our-brands"
+          >Our Brands</a
+        >
+      </li>
+      <li class="custom-header-mobile-nav-item">
+        <a class="custom-header-mobile-nav-link" href="/subscribe">Subscribe</a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuButton = document.querySelector(".custom-header-menu-toggle");
+    const mobileNavMenu = document.querySelector(
+      ".custom-header-mobile-nav-menu "
+    );
+
+    menuButton.addEventListener("click", () => {
+      menuButton.classList.toggle("is-active");
+
+      if (menuButton.classList.contains("is-active")) {
+        mobileNavMenu.style.left = 0;
+      } else {
+        mobileNavMenu.style.left = "-250px";
+      }
+    });
+  });
+</script>

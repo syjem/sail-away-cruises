@@ -1,0 +1,223 @@
+<style>
+  .custom-footer {
+    display: block;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .custom-footer-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .custom-footer-main-content {
+    margin: 0 7rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    transition: 0.3 ease;
+  }
+
+  .custom-footer-logo-container {
+    display: block;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .custom-footer-contact-us-container {
+    box-sizing: border-box;
+
+    padding: 1rem;
+  }
+
+  .custom-footer-contact-us-header {
+    margin: 0;
+    font-size: 1rem;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .custom-footer-contact-us-info {
+    margin: 0.2rem 0;
+    font-size: 0.9rem;
+    font-weight: 300;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .custom-footer-nav-container {
+    box-sizing: border-box;
+    padding: 1rem;
+  }
+
+  .custom-footer-nav-menu {
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    margin: 0;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .custom-footer-nav-item {
+    padding: 0.3rem;
+    box-sizing: border-box;
+  }
+
+  .custom-footer-nav-link {
+    text-decoration: none;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .custom-footer-social-container {
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .custom-footer-social-menu {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+  }
+
+  .custom-footer-social-logo {
+    width: 55px;
+    box-sizing: border-box;
+  }
+
+  .custom-footer-hr {
+    max-width: 90%;
+    display: block;
+    box-sizing: border-box;
+    height: 1px;
+    margin: 0 7rem;
+    background-color: rgba(27, 27, 28, 0.3);
+  }
+
+  .custom-footer-additional-content {
+    padding: 0.5rem;
+    margin: 0 7rem;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+  }
+
+  .custom-footer-credits-reserved {
+    font-size: 0.8rem;
+  }
+
+  .custom-footer-terms-conditions {
+    font-size: 0.8rem;
+  }
+
+  .custom-footer-terms-link,
+  .custom-footer-privacy-policy-link {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .custom-footer-terms-link:hover,
+  .custom-footer-privacy-policy-link:hover {
+    text-decoration: underline;
+  }
+
+  @media screen and (max-width: 1040px) {
+    .custom-footer {
+      padding: 0;
+    }
+
+    .custom-footer-main-content {
+      margin: 0;
+      padding: 0;
+    }
+
+    .custom-footer-additional-content {
+      margin: 0;
+      padding: 1rem;
+    }
+
+    .custom-footer-hr {
+      margin: 0 auto;
+    }
+  }
+</style>
+
+<footer class="custom-footer">
+  <div class="custom-footer-container">
+    <div class="custom-footer-main-content">
+      <div class="custom-footer-logo-container">
+        <img src="./images/SailAway_Logo.webp" alt="Sail Away Logo" />
+      </div>
+      <div class="custom-footer-contact-us-container">
+        <h6 class="custom-footer-contact-us-header">Contact Us</h6>
+        <p class="custom-footer-contact-us-info">
+          Suite 102, 66 Berry Street, North Sydney, NSW, 2060
+        </p>
+        <p class="custom-footer-contact-us-info">Phone: (02) 8111 7399</p>
+      </div>
+      <div class="custom-footer-nav-container">
+        <ul class="custom-footer-nav-menu">
+          <li class="custom-footer-nav-item">
+            <a class="custom-footer-nav-link" href="/about-us">About Us</a>
+          </li>
+          <li class="custom-footer-nav-item">
+            <a class="custom-footer-nav-link" href="/our-brands">Our Brands</a>
+          </li>
+          <li class="custom-footer-nav-item">
+            <a class="custom-footer-nav-link" href="/subscribe">Subscribe</a>
+          </li>
+        </ul>
+      </div>
+      <div class="custom-footer-social-container">
+        <ul class="custom-footer-social-menu">
+          <li class="custom-footer-social-item">
+            <a
+              href="https://web.facebook.com/sailawaycruises.deals"
+              target="_blank"
+            >
+              <img
+                class="custom-footer-social-logo"
+                src="./images/facebook_logo.svg"
+                alt="facebook_logo"
+              />
+            </a>
+          </li>
+          <li class="custom-footer-social-item">
+            <a
+              href="https://www.instagram.com/_sailawaycruises/"
+              target="_blank"
+              ><img
+                class="custom-footer-social-logo"
+                src="./images/instagram_logo.svg"
+                alt="instagram_logo"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="custom-footer-hr"></div>
+    <div class="custom-footer-additional-content">
+      <p class="custom-footer-credits-reserved">
+        &copy; 2023 Sail Away Cruises
+      </p>
+      <p class="custom-footer-terms-conditions">
+        <a class="custom-footer-terms-link" href="/terms-conditions"
+          >Terms & Conditions</a
+        >
+        &
+        <a class="custom-footer-privacy-policy-link" href="/privacy-policy"
+          >Privacy Policy</a
+        >
+      </p>
+    </div>
+  </div>
+</footer>

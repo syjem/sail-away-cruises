@@ -1,0 +1,355 @@
+body {
+  margin: 0;
+  margin: 0 auto;
+}
+
+.custom-header {
+  color: rgb(255, 255, 255);
+  padding: 1.5rem 3rem;
+  width: 100%;
+  position: static;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  .custom-header {
+    padding: 0;
+  }
+}
+
+.custom-header-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.custom-header-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+  margin: 0 7.5rem;
+  transition: 0.3s ease;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  .custom-header-nav {
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .custom-header-nav {
+    margin: 0 !important;
+  }
+}
+
+.custom-header-menu-toggle {
+  position: relative;
+  display: block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+
+  display: none;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  .custom-header-menu-toggle {
+    display: block;
+  }
+}
+
+.custom-header-bar,
+.custom-header-menu-toggle::after,
+.custom-header-menu-toggle::before {
+  content: "";
+  display: block;
+  min-width: 100%;
+  width: 100%;
+  height: 4px;
+  border-radius: 3px;
+  background-color: #000;
+  margin: 4px 0px;
+  box-sizing: border-box;
+  transition: 0.3s ease;
+}
+
+.custom-header-menu-toggle.is-active::before {
+  transform: rotate(-45deg) translate(-9px, 2px);
+}
+
+.custom-header-menu-toggle.is-active::after {
+  transform: rotate(45deg) translate(-9px, -3px);
+}
+
+.custom-header-menu-toggle.is-active .custom-header-bar {
+  opacity: 0;
+}
+
+.custom-header-main-logo-container {
+  display: block;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.custom-header-nav-menu {
+  padding: 0;
+  gap: 0.5rem;
+  display: flex;
+  margin-right: 1rem;
+  align-items: center;
+  list-style-type: none;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  .custom-header-nav-menu {
+    display: none;
+  }
+}
+
+.custom-header-nav-item {
+  padding: 0.5rem;
+  align-self: center;
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+.custom-header-nav-link {
+  text-decoration: none;
+  color: rgb(255, 184, 31);
+  font-weight: 900;
+  font-size: 0.9rem;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+.custom-header-nav-link:hover {
+  color: rgb(96, 94, 94);
+}
+
+.custom-header-mobile-nav-menu {
+  padding: 0;
+  list-style: none;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 0;
+
+  position: fixed;
+  top: 100px;
+  left: -250px;
+  display: block;
+  width: 250px;
+  height: 100%;
+  margin: 0;
+  z-index: 100;
+  transition: 0.3s ease;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.36);
+  box-sizing: border-box;
+}
+
+.custom-header-mobile-nav-item {
+  display: block;
+  padding-left: 0.5rem;
+  box-sizing: border-box;
+  transition: 0.3s ease;
+}
+
+.custom-header-mobile-nav-item:hover {
+  background-color: rgba(219, 216, 216, 0.8) !important;
+}
+
+.custom-header-mobile-nav-item:hover .custom-header-mobile-nav-link {
+  color: rgb(96, 94, 94);
+}
+
+.custom-header-mobile-nav-link {
+  display: block;
+  padding: 0.5rem;
+  font-weight: 900;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: 0.3s ease;
+  font-family: sans-serif;
+  color: rgb(255, 184, 31);
+  box-sizing: border-box;
+}
+
+.custom-header-mobile-nav-link:hover {
+  color: rgb(96, 94, 94);
+}
+
+@media screen and (min-width: 768px) {
+  .custom-header-mobile-nav-menu {
+    display: none !important;
+  }
+}
+
+/* =========================================================================================== */
+/* Footer */
+
+.custom-footer {
+  display: block;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.custom-footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.custom-footer-main-content {
+  margin: 0 7rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  transition: 0.3 ease;
+}
+
+.custom-footer-logo-container {
+  display: block;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.custom-footer-contact-us-container {
+  box-sizing: border-box;
+
+  padding: 1rem;
+}
+
+.custom-footer-contact-us-header {
+  margin: 0;
+  font-size: 1rem;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.custom-footer-contact-us-info {
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+  font-weight: 300;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.custom-footer-nav-container {
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.custom-footer-nav-menu {
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  margin: 0;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.custom-footer-nav-item {
+  padding: 0.3rem;
+  box-sizing: border-box;
+}
+
+.custom-footer-nav-link {
+  text-decoration: none;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.custom-footer-social-container {
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.custom-footer-social-menu {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+.custom-footer-social-logo {
+  width: 55px;
+  box-sizing: border-box;
+}
+
+.custom-footer-hr {
+  max-width: 90%;
+  display: block;
+  box-sizing: border-box;
+  height: 1px;
+  margin: 0 7rem;
+  background-color: rgba(27, 27, 28, 0.3);
+}
+
+.custom-footer-additional-content {
+  padding: 0.5rem;
+  margin: 0 7rem;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.custom-footer-credits-reserved {
+  font-size: 0.8rem;
+}
+
+.custom-footer-terms-conditions {
+  font-size: 0.8rem;
+}
+
+.custom-footer-terms-link,
+.custom-footer-privacy-policy-link {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.custom-footer-terms-link:hover,
+.custom-footer-privacy-policy-link:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1040px) {
+  .custom-footer {
+    padding: 0;
+  }
+
+  .custom-footer-main-content {
+    margin: 0;
+    padding: 0;
+  }
+
+  .custom-footer-additional-content {
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .custom-footer-hr {
+    margin: 0 auto;
+  }
+}

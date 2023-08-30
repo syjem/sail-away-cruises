@@ -1,0 +1,69 @@
+The site is:
+https://www.sailawaycruises.com.au/
+
+Please extract the header and footer of this site.
+
+Some information about the booking engine, it may be relevant to you:
+
+Steps to configure Header and Footer
+
+• header.html or footer.html file must not contain any <html>, <head>, <Meta> and
+    <body> tags.
+• Header/Footer design should be fully independent and not having dependencies of
+    any 3rd party library like Bootstrap, jQuery, etc. Also, it should not contain any
+    generic styling which could conflict with the Odysseus style sheet.
+
+• Header file must have one and only one root element i.e. header tag with class
+    custom-header. That element can have one or many container div tags. Those
+    container div tags must have class custom-header-container. All other HTML
+    elements must be inside those containers only.
+
+• Footer file must also have one and only one root element i.e. footer tag with class
+    custom-footer. That element can have one or many container div tags. Those
+    container div tags must have class custom-footer-container. All other HTML
+    elements must be inside those containers only.
+
+• All CSS must be defined with the reference of above root level selectors i.e.
+    .custom-header-container for header, and .custom-footer-container for footer.
+
+    All custom CSS class names should start with .custom-header or .custom-footer
+    prefix. e.g. class for navigation bar in header should be .custom-header-nav, and
+    .custom-footer-nav for footer.
+
+• E.g. if you need to specify font-size of the navigation bar available in the header file,
+    you should not specify the styles on general selectors like h1, body, p etc. You need
+    to add class custom-header-nav on root element of nav bar and define CSS on
+    custom-header-nav.
+
+. custom-header-nav{font-size:20px;}
+
+    CSS selectors should be based on classes only, as specified in above pattern. Do not
+    use ID selectors in CSS.
+
+• Do not add the reference of bootstrap CSS.
+
+• Write required style/script in the same html file of header/footer/transition with a
+    separate style/script element. 
+
+    Do not use site preference for
+    header/footer/transition specific CSS.
+
+• Use plain JavaScript for functionalities like navigation, toggling menu/aside menu,
+    etc. Usage of jQuery should be avoided.
+
+
+
+4
+
+
+• Do not add JavaScript code which can affect functionalities of site.
+• Do not add the reference of jQuery – or else it can conflict with the other version of
+jQuery included in Odysseus’s code.
+• Do not keep unused or commented code.
+• Code formation and cleanup should be proper.
+• Header/Footer design should be responsive, and RTL supported (if required).
+
+
+
+• Our main container’s size is set to 95% of the screen size using --main-container-
+max-width CSS variable. It can be overridden according to requirement to customize
